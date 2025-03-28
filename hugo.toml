@@ -42,11 +42,11 @@ disableDefaultLanguageRedirect = false
   # updatedDatePrefix = "Updated"
 
   # whether to show a page's estimated reading time
-  # readingTime = false # default
+  readingTime = true
 
   # whether to show a table of contents
   # can be overridden in a page's front-matter
-  # Toc = false # default
+  Toc = true
 
   # set title for the table of contents
   # can be overridden in a page's front-matter
@@ -61,11 +61,10 @@ disableDefaultLanguageRedirect = false
   # on your server.
   # This value can be customized according to Hugo documentation:
   # https://gohugo.io/functions/time/format/
-  # Default value (no changes needed):
-  # dateFormat = "2006-01-02"
-  # Example format, with date, time, and timezone abbreviation:
-  # dateFormat = "2006-01-02 3:04:06 PM MST"
-
+  dateFormat = ":date_long"
+  
+  # Momiko fork specific
+  shortLists = true
 
 [params.twitter]
   # set Twitter handles for Twitter cards
@@ -77,7 +76,7 @@ disableDefaultLanguageRedirect = false
 [languages]
   [languages.en]
     languageName = "English"
-    title = "Terminal"
+    title = "Momiko"
 
     [languages.en.params]
       subtitle = "A simple, retro theme for Hugo"
@@ -93,6 +92,8 @@ disableDefaultLanguageRedirect = false
       missingBackButtonLabel = "Back to home page"
       minuteReadingTime = "min read"
       words = "words"
+      TocTitle = "Table of Contents"
+      updatedDatePrefix = "Updated"
 
       [languages.en.params.logo]
         logoText = "Momiko - EN"
@@ -126,7 +127,7 @@ disableDefaultLanguageRedirect = false
           weight = 50
   [languages.fr]
     languageName = "Français"
-    title = "Le Terminal"
+    title = "Momiko"
 
     [languages.fr.params]
       subtitle = "Un thème simple et rétro pour Hugo"
@@ -142,6 +143,8 @@ disableDefaultLanguageRedirect = false
       missingBackButtonLabel = "Back to home page"
       minuteReadingTime = "mins de lecture"
       words = "mots"
+      TocTitle = "Table des Matières"
+      updatedDatePrefix = "Mis à jour"
 
       [languages.fr.params.logo]
         logoText = "Momiko - FR"
