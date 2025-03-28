@@ -18,7 +18,7 @@ disableDefaultLanguageRedirect = false
   contentTypeName = "posts"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
+  showMenuItems = 5
 
   # show selector to switch language
   showLanguageSelector = true
@@ -100,26 +100,30 @@ disableDefaultLanguageRedirect = false
 
       [languages.en.menu]
         [[languages.en.menu.main]]
-          identifier = "about"
-          name = "About"
-          url = "/pages/about"
+          identifier = "posts"
+          name = "Posts"
+          url = "/posts"
+	  weight = 10
+	[[languages.en.menu.main]]
+	  identifier = "categories"
+	  name = "Categories"
+	  url = "/categories"
+	  weight = 20
         [[languages.en.menu.main]]
           identifier = "tags"
           name = "Tags"
           url = "/tags"
-        [[languages.en.menu.main]]
-          identifier = "posts"
-          name = "Posts"
-          url = "/posts"
+	  weight = 30
         [[languages.en.menu.main]]
           identifier = "links"
           name = "Links"
           url = "https://linktree.wolfiy.ch/"
+	  weight = 40
         [[languages.en.menu.main]]
-          identifier = "showcase"
-          name = "Showcase"
-          url = "/showcase"
-
+          identifier = "about"
+          name = "About"
+          url = "/pages/about"
+          weight = 50
   [languages.fr]
     languageName = "Français"
     title = "Le Terminal"
@@ -145,22 +149,27 @@ disableDefaultLanguageRedirect = false
 
       [languages.fr.menu]
         [[languages.fr.menu.main]]
-          identifier = "about"
-          name = "A propos"
-          url = "/fr/about"
+          identifier = "posts"
+          name = "Posts"
+          url = "/fr/posts"
+	  weight = 10
+	[[languages.fr.menu.main]]
+	  identifier = "categories"
+	  name = "Catégories"
+	  url = "/fr/categories"
+	  weight = 20
         [[languages.fr.menu.main]]
           identifier = "tags"
           name = "Tags"
           url = "/fr/tags"
-        [[languages.fr.menu.main]]
-          identifier = "posts"
-          name = "Posts"
-          url = "/fr/posts"
+	  weight = 30
         [[languages.fr.menu.main]]
           identifier = "links"
           name = "Liens"
           url = "https://linktree.wolfiy.ch/"
+	  weight = 40
         [[languages.fr.menu.main]]
-          identifier = "showcase"
-          name = "Showcase"
-          url = "/showcase"
+          identifier = "about"
+          name = "A propos"
+          url = "/fr/pages/about"
+          weight = 50

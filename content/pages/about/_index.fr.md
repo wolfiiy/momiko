@@ -1,10 +1,10 @@
 +++
-title = "About"
+title = "A propos"
 date = "2019-01-25"
 author = "Radek"
 +++
 
-# Hi there
+# Coucou
 
 My name is Radek and I'm the author of this theme. I made it to help you present your ideas easier.
 
