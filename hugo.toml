@@ -4,6 +4,9 @@ languageCode = "en-us"
 # Remove it if you use the theme as a remote Hugo Module.
 theme = "terminal"
 pagination.pagerSize = 5
+defaultContentLanguage = "en"
+defaultLanguageInSubdir = true
+disableDefaultLanguageRedirect = false
 
 # Required for Chroma and the custom syntax highlighting.
 [markup.highlight]
@@ -92,14 +95,14 @@ pagination.pagerSize = 5
       words = "words"
 
       [languages.en.params.logo]
-        logoText = "Terminal"
+        logoText = "Momiko - EN"
         logoHomeLink = "/"
 
       [languages.en.menu]
         [[languages.en.menu.main]]
           identifier = "about"
           name = "About"
-          url = "/about"
+          url = "/pages/about"
         [[languages.en.menu.main]]
           identifier = "showcase"
           name = "Showcase"
@@ -115,24 +118,24 @@ pagination.pagerSize = 5
       keywords = ""
       copyright = ""
       menuMore = "Afficher plus"
-      readMore = "Read more"
-      readOtherPosts = "Read other posts"
+      readMore = "Lire la suite"
+      readOtherPosts = "Lire d'autres posts"
       newerPosts = "Newer posts"
       olderPosts = "Older posts"
       missingContentMessage = "Page not found..."
       missingBackButtonLabel = "Back to home page"
-      minuteReadingTime = "min read"
-      words = "words"
+      minuteReadingTime = "mins de lecture"
+      words = "mots"
 
       [languages.fr.params.logo]
-        logoText = "Terminal"
-        logoHomeLink = "/"
+        logoText = "Momiko - FR"
+        logoHomeLink = "/fr"
 
       [languages.fr.menu]
         [[languages.fr.menu.main]]
           identifier = "about"
           name = "A propos"
-          url = "/about"
+          url = "/fr/about"
         [[languages.fr.menu.main]]
           identifier = "showcase"
           name = "Showcase"
