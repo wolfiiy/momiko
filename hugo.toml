@@ -104,6 +104,18 @@ disableDefaultLanguageRedirect = false
           name = "About"
           url = "/pages/about"
         [[languages.en.menu.main]]
+          identifier = "tags"
+          name = "Tags"
+          url = "/tags"
+        [[languages.en.menu.main]]
+          identifier = "posts"
+          name = "Posts"
+          url = "/posts"
+        [[languages.en.menu.main]]
+          identifier = "links"
+          name = "Links"
+          url = "https://linktree.wolfiy.ch/"
+        [[languages.en.menu.main]]
           identifier = "showcase"
           name = "Showcase"
           url = "/showcase"
@@ -136,6 +148,18 @@ disableDefaultLanguageRedirect = false
           identifier = "about"
           name = "A propos"
           url = "/fr/about"
+        [[languages.fr.menu.main]]
+          identifier = "tags"
+          name = "Tags"
+          url = "/fr/tags"
+        [[languages.fr.menu.main]]
+          identifier = "posts"
+          name = "Posts"
+          url = "/fr/posts"
+        [[languages.fr.menu.main]]
+          identifier = "links"
+          name = "Liens"
+          url = "https://linktree.wolfiy.ch/"
         [[languages.fr.menu.main]]
           identifier = "showcase"
           name = "Showcase"
