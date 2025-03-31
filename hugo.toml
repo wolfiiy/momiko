@@ -8,6 +8,11 @@ defaultContentLanguage = "en"
 defaultLanguageInSubdir = true
 disableDefaultLanguageRedirect = false
 
+# GithHub pages
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 # Required for Chroma and the custom syntax highlighting.
 [markup.highlight]
   noClasses = false
