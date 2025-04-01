@@ -9,5 +9,8 @@ description = "this is a description"
 showFullContent = false
 readingTime = false
 hideComments = true
-summary = "This is the archive."
 +++
+
+# Archive
+
+This page lists all posts in reverse chronological order.
