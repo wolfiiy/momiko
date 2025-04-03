@@ -6,7 +6,7 @@ authorTwitter = "" #do not include @
 cover = ""
 tags = ["réseau"]
 keywords = ["réseau", "domaine", "Github"]
-description = "Mise en place d'un sous domaine permettant d'accéder à un site hébergé à l'aide du service Github Pages."
+description = ""
 showFullContent = false
 readingTime = false
 hideComments = false
@@ -15,3 +15,4 @@ draft = true
 
 ## Déploiement du site
 
+Test
