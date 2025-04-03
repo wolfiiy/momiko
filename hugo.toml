@@ -107,30 +107,31 @@ disableDefaultLanguageRedirect = false
 
       [languages.en.menu]
         [[languages.en.menu.main]]
+          identifier = "home"
+          name = "Home"
+          url = "/"
+          weight = 10
+        [[languages.en.menu.main]]
           identifier = "posts"
-          name = "Posts"
+          name = "Archive"
           url = "/posts"
-	  weight = 10
-	[[languages.en.menu.main]]
-	  identifier = "categories"
-	  name = "Categories"
-	  url = "/categories"
-	  weight = 20
+          weight = 20
         [[languages.en.menu.main]]
           identifier = "tags"
           name = "Tags"
           url = "/tags"
-	  weight = 30
+          weight = 30
         [[languages.en.menu.main]]
           identifier = "links"
           name = "Links"
           url = "https://linktree.wolfiy.ch/"
-	  weight = 40
+          weight = 40
         [[languages.en.menu.main]]
           identifier = "about"
           name = "About"
           url = "/pages/about"
           weight = 50
+
   [languages.fr]
     languageName = "Français"
     title = "Momiko"
@@ -158,25 +159,25 @@ disableDefaultLanguageRedirect = false
 
       [languages.fr.menu]
         [[languages.fr.menu.main]]
+          identifier = "home"
+          name = "Accueil"
+          url = "/fr"
+	        weight = 10
+        [[languages.fr.menu.main]]
           identifier = "posts"
-          name = "Posts"
+          name = "Archive"
           url = "/fr/posts"
-	  weight = 10
-	[[languages.fr.menu.main]]
-	  identifier = "categories"
-	  name = "Catégories"
-	  url = "/fr/categories"
-	  weight = 20
+	        weight = 20
         [[languages.fr.menu.main]]
           identifier = "tags"
           name = "Tags"
           url = "/fr/tags"
-	  weight = 30
+	        weight = 30
         [[languages.fr.menu.main]]
           identifier = "links"
           name = "Liens"
           url = "https://linktree.wolfiy.ch/"
-	  weight = 40
+	        weight = 40
         [[languages.fr.menu.main]]
           identifier = "about"
           name = "A propos"
