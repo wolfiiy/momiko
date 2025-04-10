@@ -26,7 +26,7 @@ D'autres polices peuvent être trouvées sur le [wiki](https://wiki.archlinux.or
 
 ### Locale japonaise
 
-Les locales sont utilisées par certains programmes pour effectuer le rendu des polices, afficher correctement les formats régionaux monétaires, les dates, les heures et tout autre standards spécifiques à une région ou un langue. Si le système ne comporte pas de locale japonaise, certains textes pourraient ne pas s'afficher correctement[^1].
+Les locales sont utilisées par certains programmes pour effectuer le rendu des polices, afficher correctement les formats régionaux monétaires, les dates, les heures et tout autre standards spécifiques à une région ou une langue. Si le système ne comporte pas de locale japonaise, certains textes pourraient ne pas s'afficher correctement[^1].
 
 [^1]: Archwiki, *[Localization/Japanese](https://wiki.archlinux.org/title/Localization/Japanese)*
 
@@ -66,7 +66,7 @@ Un clavier japonais est constitué de deux éléments:
 
 Sur les environnements basés sur GTK (GNOME, Mate, ...), il est courant de trouver l'IMF Ibus, alors que sur les environnements basés sur Qt (KDE Plasma, ...), Fctix5 est plus souvent utilisé. Les deux fonctionnent avec tous les IME.
 
-Il existe de nombreux IME (cf. [wiki](https://wiki.archlinux.org/title/Localization/Japanese#Input_Method_Editor_%28IME%29)), mais le plus utilisé est appelé mozc, un projet open source basé sur Google Japanese Input. Tous les paquets peuvent être installés depuis les répertoires officiels d'Arch Linux, à l’exception de `ibus-mozc` qui peut être trouvé sur les AUR.
+Il existe de nombreux IME (cf. [wiki](https://wiki.archlinux.org/title/Localization/Japanese#Input_Method_Editor_%28IME%29)), mais le plus utilisé est mozc, un projet open source basé sur Google Japanese Input. Tous les paquets peuvent être installés depuis les répertoires officiels d'Arch Linux, à l’exception de `ibus-mozc` qui peut être trouvé sur les AUR.
 
 ```bash
 # GTK
@@ -79,7 +79,7 @@ paru -S ibus-mozc
 sudo pacman -S fcitx5-im fcitx5-mozc
 ```
 
-Ensuite, quatres variables d'environement doivent être ajoutées. Sur une session Wayland, cela peut se faire an ajoutant les lignes suivantes au fichier `~/.config/environment.d/envvars.conf`.
+Ensuite, trois ou quatres variables d'environement doivent être ajoutées, selon l'IMF. Pour une session Wayland, cela peut se faire an ajoutant les lignes suivantes au fichier `~/.config/environment.d/envvars.conf`.
 
 ```cfg
 # GTK
@@ -94,9 +94,8 @@ MOZC_IBUS_CANDIDATE_WINDOW=ibus
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
-MOZC_IBUS_CANDIDATE_WINDOW=fcitx
 ```
 
 A noter que les variables d'environnement pour fcitx ne contiennent pas de 5.
 
-Afin, le clavier peut être ajouté à la session. Sur mon système, basé sur GNOME, cela se fait via l'application Paramètres, sous *Clavier* > *Méthodes d'entrées* > *Ajouter une méthode d'entrée* > *Japonais*.
+Enfin, le clavier peut être ajouté à la session. Sur mon système, basé sur GNOME, cela se fait via l'application Paramètres, sous *Clavier* > *Méthodes d'entrées* > *Ajouter une méthode d'entrée* > *Japonais*.
