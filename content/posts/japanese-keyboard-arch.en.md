@@ -79,7 +79,7 @@ paru -S ibus-mozc
 sudo pacman -S fcitx5-im fcitx5-mozc
 ```
 
-Then, three or four environment variables must be set, depending on the IMF. On Wayland sessions, the following lines can be added to the `~/.config/environment.d/envvars.conf` file.
+Then, three or four environment variables must be set, depending on the IMF, which  done by adding the following lines to the `~/.config/environment.d/envvars.conf` file.
 
 ```cfg
 # On GTK-based environments

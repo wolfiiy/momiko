@@ -79,7 +79,7 @@ paru -S ibus-mozc
 sudo pacman -S fcitx5-im fcitx5-mozc
 ```
 
-Ensuite, trois ou quatres variables d'environement doivent être ajoutées, selon l'IMF. Pour une session Wayland, cela peut se faire an ajoutant les lignes suivantes au fichier `~/.config/environment.d/envvars.conf`.
+Ensuite, trois ou quatres variables d'environement doivent être ajoutées, selon l'IMF, ce qui peut se faire an ajoutant les lignes suivantes au fichier `~/.config/environment.d/envvars.conf`.
 
 ```cfg
 # GTK
