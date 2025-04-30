@@ -28,20 +28,26 @@ Le premier paquet installera la police "de base" contenant les caractères d'alp
 
 D'autres polices peuvent être trouvées sur le [wiki](https://wiki.archlinux.org/title/Localization/Japanese) d'*Arch Linux* ainsi que sur le [blog](https://tatsumoto-ren.github.io/blog/resources.html#fonts) de Tatsumoto Ren.
 
-> Attention! Certains idéogrammes s'écrivent différamment en chinois et en japonais! Par exemple, le caractère `直` ne contient pas de trait vertical en chinois[^1].
+> Attention! Certains idéogrammes s'écrivent différemment en chinois et en japonais! Par exemple, le caractère `直` ne contient pas de trait vertical en chinois[^1].
 
 [^1]: Wiktionary, *[直 - Alternative forms](https://en.wiktionary.org/wiki/%E7%9B%B4#Alternative_forms)* [en anglais]
 
 ### Locale japonaise
 
-Les locales sont utilisées par certains programmes pour effectuer le rendu des polices, afficher correctement les formats régionaux monétaires, les dates, les heures et tout autre standards spécifiques à une région ou une langue. Si le système ne comporte pas de locale japonaise, certains textes pourraient ne pas s'afficher correctement[^1].
+Les locales permettent au système d'effectuer le rendu des polices d'écriture et d'afficher les formats régionaux (monétaires, dates, heures, ...) spécifiques à une langue ou une région. Si une locale est manquante, certains textes pourraient ne pas s'afficher correctement[^2].
 
-[^1]: Archwiki, *[Localization/Japanese](https://wiki.archlinux.org/title/Localization/Japanese)*
+[^2]: Archwiki, *[Localization/Japanese](https://wiki.archlinux.org/title/Localization/Japanese)* [en anglais].
 
-Pour ajouter une locale japonaise, modifier le fichier `/etc/locale.gen` et décommenter la ligne `ja_JP.UTF8 UTF8` en enlevant le symbole `#` au début de celle-ci. Le fichier devrait ressembler à ceci:
+L'ajout d'une locale - quelle que soit la langue - se fait via le fichier `/etc/locale.gen`, utilisé comme référence lorsque le système génère ses locales. Pour ajouter la locale japonaise, décommenter la ligne `ja_JP.UTF8 UTF8` en supprimant le caractère `#`au début de celle-ci. Si d'autres locales sont activées, ne pas les supprimer.
+
+```bash
+sudo vim /etc/locale.gen
+```
+
+Le contenu du fichier devrait alors ressembler à cela:
 
 ```cfg
-# File: /etc/locale.gen
+# Fichier: /etc/locale.gen
 # ...
 #iu_CA UTF-8  
 #ja_JP.EUC-JP EUC-JP  
@@ -51,9 +57,15 @@ ja_JP.UTF-8 UTF-8
 # ...
 ```
 
-Une fois modifié, sauvegarder le fichier et exécuter la commande `locale-gen` pour générer la ou les locale(s). Ces deux actions nécessitent des droits de super utilisateur (`sudo`).
+Une fois la ligne modifiée, sauvegarder le fichier et exécuter la génération des locales à l'aide de l'outil `locale-gen`.
 
-La locale a été correctement activée si la sortie de la commande `locale -a`, qui liste l'ensemble des locales activées, affiche la locale japonaise. Pour référence, voici la sortie obtenue sur mon système:
+```bash
+sudo locale-gen
+```
+
+Enfin, pour vérifier l'activation de la locale, il est possible de lister l'ensemble des locales présentes sur le système à l'aide de la commande `locale -a`. Si ja_JP.utf8 s'y trouve, la manipulation est réussie.
+
+Pour référence, voici la sortie obtenue sur mon sytème:
 
 ```txt
 [akari@nyarch ~]$ locale -a
