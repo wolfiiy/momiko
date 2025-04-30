@@ -1,14 +1,12 @@
 baseurl = "https://blog.wolfiy.ch"
 languageCode = "en-us"
-# Add it only if you keep the theme in the `themes` directory.
-# Remove it if you use the theme as a remote Hugo Module.
 theme = "terminal"
 pagination.pagerSize = 10
 defaultContentLanguage = "en"
 defaultLanguageInSubdir = true
 disableDefaultLanguageRedirect = false
 
-# GithHub pages
+# Required by GithHub pages
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
@@ -41,7 +39,8 @@ disableDefaultLanguageRedirect = false
 
   # set post to show the last updated
   # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
-  showLastUpdated = false
+  enableGitInfo = true
+  showLastUpdated = true
 
   # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
   # updatedDatePrefix = "Updated"
@@ -85,8 +84,8 @@ disableDefaultLanguageRedirect = false
     title = "Momiko"
 
     [languages.en.params]
-      subtitle = "A simple, retro theme for Hugo"
-      owner = ""
+      subtitle = "A blog about tech"
+      owner = "wolfiy"
       keywords = ""
       copyright = ""
       menuMore = "Show more"
@@ -102,7 +101,7 @@ disableDefaultLanguageRedirect = false
       updatedDatePrefix = "Updated"
 
       [languages.en.params.logo]
-        logoText = "Momiko - EN"
+        logoText = "Momiko [EN]"
         logoHomeLink = "/"
 
       [languages.en.menu]
@@ -137,15 +136,15 @@ disableDefaultLanguageRedirect = false
     title = "Momiko"
 
     [languages.fr.params]
-      subtitle = "Un thème simple et rétro pour Hugo"
-      owner = ""
+      subtitle = "Un blog sur la tech"
+      owner = "wolfiy"
       keywords = ""
       copyright = ""
       menuMore = "Afficher plus"
       readMore = "Lire la suite"
       readOtherPosts = "Lire d'autres posts"
-      newerPosts = "Newer posts"
-      olderPosts = "Older posts"
+      newerPosts = "Posts récents"
+      olderPosts = "Anciens posts"
       missingContentMessage = "Page non trouvée..."
       missingBackButtonLabel = "Retour à l'accueil"
       minuteReadingTime = "mins de lecture"
@@ -154,7 +153,7 @@ disableDefaultLanguageRedirect = false
       updatedDatePrefix = "Mis à jour"
 
       [languages.fr.params.logo]
-        logoText = "Momiko - FR"
+        logoText = "Momiko [FR]"
         logoHomeLink = "/fr"
 
       [languages.fr.menu]
