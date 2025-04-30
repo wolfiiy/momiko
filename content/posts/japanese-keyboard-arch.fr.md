@@ -5,8 +5,8 @@ author = "wolfiy"
 authorTwitter = "" #do not include @
 cover = ""
 tags = ["linux", "japonais"]
-keywords = ["", ""]
-description = "Dans ce court post, je vais vous expliquer comment configurer un clavier japonais sur Arch Linux."
+keywords = ["arch", "linux", "clavier", "japonais"]
+description = "Cet article décrit la procédure à effectuer afin de configurer un clavier japonais sur Arch Linux."
 showFullContent = false
 readingTime = true
 hideComments = false
@@ -16,13 +16,21 @@ hideComments = false
 
 ### Police
 
-Des polices d'écriture japonaises sont nécessaires. A noter que certains caractères sont légèrement différents dans les polices chinoises. Je recommande d'installer Noto.
+Par défaut, le système n'est pas muni de polices d'écritures japonaises, il est donc nécessaire d'en installer une afin de permettre un affichage correct des *kanas* et des *kanjis*.
+
+Je recommande la police *Noto* car très complète et distribuée sous licence libre.
 
 ```bash
 sudo pacman -S --needed noto-fonts noto-fonts-cjk
 ```
 
-D'autres polices peuvent être trouvées sur le [wiki](https://wiki.archlinux.org/title/Localization/Japanese) ainsi que sur le [blog](https://tatsumoto-ren.github.io/blog/resources.html#fonts) de Tatsumoto Ren.
+Le premier paquet installera la police "de base" contenant les caractères d'alphabets (latin, cyrillique, ...) et le second contient les idéogrammes (*kanji*, *hanzi*, *hanja*).
+
+D'autres polices peuvent être trouvées sur le [wiki](https://wiki.archlinux.org/title/Localization/Japanese) d'*Arch Linux* ainsi que sur le [blog](https://tatsumoto-ren.github.io/blog/resources.html#fonts) de Tatsumoto Ren.
+
+> Attention! Certains idéogrammes s'écrivent différamment en chinois et en japonais! Par exemple, le caractère `直` ne contient pas de trait vertical en chinois[^1].
+
+[^1]: Wiktionary, *[直 - Alternative forms](https://en.wiktionary.org/wiki/%E7%9B%B4#Alternative_forms)* [en anglais]
 
 ### Locale japonaise
 
