@@ -2,8 +2,8 @@ baseurl = "https://blog.wolfiy.ch"
 languageCode = "en-us"
 theme = "terminal"
 pagination.pagerSize = 10
-defaultContentLanguage = "en"
-defaultLanguageInSubdir = true
+defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = true
 disableDefaultLanguageRedirect = false
 
 # Required by GithHub pages
@@ -102,23 +102,23 @@ disableDefaultLanguageRedirect = false
 
       [languages.en.params.logo]
         logoText = "Momiko [EN]"
-        logoHomeLink = "/"
+        logoHomeLink = "/en"
 
       [languages.en.menu]
         [[languages.en.menu.main]]
           identifier = "home"
           name = "Home"
-          url = "/"
+          url = "/en"
           weight = 10
         [[languages.en.menu.main]]
           identifier = "posts"
           name = "Archive"
-          url = "/posts"
+          url = "/en/posts"
           weight = 20
         [[languages.en.menu.main]]
           identifier = "tags"
           name = "Tags"
-          url = "/tags"
+          url = "/en/tags"
           weight = 30
         [[languages.en.menu.main]]
           identifier = "links"
@@ -128,7 +128,7 @@ disableDefaultLanguageRedirect = false
         [[languages.en.menu.main]]
           identifier = "about"
           name = "About"
-          url = "/pages/about"
+          url = "/en/pages/about"
           weight = 50
 
   [languages.fr]
