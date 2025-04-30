@@ -1,6 +1,7 @@
 +++
 title = "Configurer le clavier japonais sous Arch Linux"
 date = "2025-04-10T19:29:48+02:00"
+lastmod = "2025-04-30T11:05:48+02:00"
 author = "wolfiy"
 authorTwitter = "" #do not include @
 cover = ""
@@ -77,45 +78,79 @@ ja_JP.utf8
 POSIX
 ```
 
-## Installation et configuration du clavier
+## Clavier japonais
+
+### Présentation
 
 Un clavier japonais est constitué de deux éléments:
 
-- Un input method framework (IMF) pour permettre à l'utilisateur de changer de IME.
-- Un input method editor (IME) pour convertir les lettres latines en kanas et kanjis.
+- Un *input method editor* (IME) pour convertir les caractères latins en *kanas* et *kanjis*.
+- Un *input method framework* (IMF) pour permettre à l'utilisateur de changer d'IME.
 
-Sur les environnements basés sur GTK (GNOME, Mate, ...), il est courant de trouver l'IMF Ibus, alors que sur les environnements basés sur Qt (KDE Plasma, ...), Fctix5 est plus souvent utilisé. Les deux fonctionnent avec tous les IME.
+Il existe deux IMF: [IBus](https://wiki.archlinux.org/title/IBus) et [Fctix5](https://wiki.archlinux.org/title/Fcitx5). Le premier est plus courant sur les environnements GTK comme GNOME ou Mate, alors que le second est plutôt utilisé dans les environnements Qt tels que KDE Plasma ou LXQt. Les deux sont compatibles avec l'ensembles des IME.
 
-Il existe de nombreux IME (cf. [wiki](https://wiki.archlinux.org/title/Localization/Japanese#Input_Method_Editor_%28IME%29)), mais le plus utilisé est mozc, un projet open source basé sur Google Japanese Input. Tous les paquets peuvent être installés depuis les répertoires officiels d'Arch Linux, à l’exception de `ibus-mozc` qui peut être trouvé sur les AUR.
+L'IME le plus souvent recommandé[^3] semble être [mozc](https://github.com/google/mozc); c'est aussi celui que j'utilise. Il s'agit d'un projet *open source* basé sur *Google Japanese Input*.
+
+[^3]: Une liste des alternatives est disponible sur le wiki: Archwiki, *[IME](https://wiki.archlinux.org/title/Localization/Japanese#Input_Method_Editor_%28IME%29)* [en anglais]
+
+### GTK
+
+Dans un environnement GTK, il faut donc installer les paquets `ibus` et `ibus-mozc`. A noter que le premier se trouve dans les répertoires officiels d'*Arch Linux* alors que le second doit être récupéré depuis les *Arch User Repositories*.
 
 ```bash
-# GTK
 sudo pacman -S ibus
 paru -S ibus-mozc
 ```
 
-```bash
-# Qt
-sudo pacman -S fcitx5-im fcitx5-mozc
-```
-
-Ensuite, trois ou quatres variables d'environement doivent être ajoutées, selon l'IMF, ce qui peut se faire an ajoutant les lignes suivantes au fichier `~/.config/environment.d/envvars.conf`.
+Ensuite, quatre variables d'environnement doivent être ajoutées. Cela peut être fait en ajoutant les lignes suivantes au fichier `~/.config/environment.d/envvars.conf` (peut être créé si inexistant).
 
 ```cfg
-# GTK
+# Fichier $HOME/.config/environment.d/envvars.conf
+# /!\ Uniquement pour les sessions Wayland /!\
 GTK_IM_MODULE=ibus
 QT_IM_MODULE=ibus
 XMODIFIERS=@im=ibus
 MOZC_IBUS_CANDIDATE_WINDOW=ibus
 ```
 
+### Qt
+
+Dans un environnement Qt, les paquets `fcitx5-im` et `fcitx5-mozc` doivent être installés. Ils sont tous deux accessibles depuis les répertoires officiels.
+
+```bash
+sudo pacman -S fcitx5-im fcitx5-mozc
+```
+
+Pour Fcitx5, seules trois variables d'environnement doivent être ajoutées. Celles-ci peuvent également être ajoutées, par exemple au fichier `~/.config/environment.d/envvars.conf`, qui peut être créé s'il n'existe pas.
+
 ```cfg
-# QT
+# Fichier $HOME/.config/environment.d/envvars.conf
+# /!\ Uniquement pour les sessions Wayland /!\
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
 ```
 
-A noter que les variables d'environnement pour fcitx ne contiennent pas de 5.
+Attention, les variables d'environnement pour Fcitx ne contiennent pas de "5"!
 
-Enfin, le clavier peut être ajouté à la session. Sur mon système, basé sur GNOME, cela se fait via l'application Paramètres, sous *Clavier* > *Méthodes d'entrées* > *Ajouter une méthode d'entrée* > *Japonais*.
+### Utilisation
+
+Une fois que tout a été installé et configuré, le clavier japonais peut être utilisé.
+
+L'ajout du clavier diffère selon l'environnement de bureau ou le *window manager* / *compositor* utilisé. Sur mon système, basé sur GNOME, il suffit d'ouvrir l'application *Paramètres* et d'accéder aux options du clavier.
+
+{{< figure src="./images/japanese-keyboard-arch/gnome-settings-keyboard.png" alt="Capture d'écran des paramètres du clavier sous GNOME." position="center" caption="Paramètres du clavier sous GNOME." captionPosition="center">}}
+
+Ensutie, cliquer sur "Ajouter une nouvelle méthode d'entrée" et sélectionner "Japonais".
+
+{{< figure src="/images/japanese-keyboard-arch/gnome-settings-add-input-source.png" alt="Capture d'écran des paramètres du clavier sous GNOME - Choix de la méthode d'entrée." position="center" caption="Choix de la méthode d'entrée sous GNOME." captionPosition="center">}}
+
+Enfin, *scroller* jusqu'à voir apparaitre "Japanese (Mozc:あ)". Cette version permet de directement passer sur une entrée en *kana*.
+
+{{< figure src="/images/japanese-keyboard-arch/gnome-settings-select-input-source.png" alt="Capture d'écran des paramètres du clavier sous GNOME - Ajout du clavier hiragana." position="center" caption="Sélection du clavier Japanese (Mozc:あ)." captionPosition="center">}}
+
+Pour changer de méthode d'entrée, le raccourci `<super> + <espace>` peut être employé. Enfin, lors de l'écriture, des *hiragana* s'affichent ainsi qu'une liste de mot. 
+
+{{< figure src="/images/japanese-keyboard-arch/example.png" alt="Exemple d'utilisation du clavier japonais." position="center" caption="Exemple d'utilisation du clavier japonais." captionPosition="center">}}
+
+Cette liste peut être naviguée à l'aide de la touche `<espace>`, et une entrée peut être sélectionnée en confirmant avec `<enter>`.
