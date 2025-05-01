@@ -1,7 +1,7 @@
 +++
 title = "Configurer le clavier japonais sous Arch Linux"
 date = "2025-04-10T19:29:48+02:00"
-lastmod = "2025-04-30T11:05:48+02:00"
+lastmod = "2025-05-01T08:25:48+02:00"
 author = "wolfiy"
 authorTwitter = "" #do not include @
 cover = ""
@@ -139,18 +139,18 @@ Une fois que tout a été installé et configuré, le clavier japonais peut êtr
 
 L'ajout du clavier diffère selon l'environnement de bureau ou le *window manager* / *compositor* utilisé. Sur mon système, basé sur GNOME, il suffit d'ouvrir l'application *Paramètres* et d'accéder aux options du clavier.
 
-{{< figure src="./images/japanese-keyboard-arch/gnome-settings-keyboard.png" alt="Capture d'écran des paramètres du clavier sous GNOME." position="center" caption="Paramètres du clavier sous GNOME." captionPosition="center">}}
+{{< figure src="/images/posts/japanese-keyboard-arch/gnome-settings-keyboard.png" alt="Capture d'écran des paramètres du clavier sous GNOME." position="center" caption="Paramètres du clavier sous GNOME." captionPosition="center">}}
 
 Ensutie, cliquer sur "Ajouter une nouvelle méthode d'entrée" et sélectionner "Japonais".
 
-{{< figure src="/images/japanese-keyboard-arch/gnome-settings-add-input-source.png" alt="Capture d'écran des paramètres du clavier sous GNOME - Choix de la méthode d'entrée." position="center" caption="Choix de la méthode d'entrée sous GNOME." captionPosition="center">}}
+{{< figure src="/images/posts/japanese-keyboard-arch/gnome-settings-add-input-source.png" alt="Capture d'écran des paramètres du clavier sous GNOME - Choix de la méthode d'entrée." position="center" caption="Choix de la méthode d'entrée sous GNOME." captionPosition="center">}}
 
 Enfin, *scroller* jusqu'à voir apparaitre "Japanese (Mozc:あ)". Cette version permet de directement passer sur une entrée en *kana*.
 
-{{< figure src="/images/japanese-keyboard-arch/gnome-settings-select-input-source.png" alt="Capture d'écran des paramètres du clavier sous GNOME - Ajout du clavier hiragana." position="center" caption="Sélection du clavier Japanese (Mozc:あ)." captionPosition="center">}}
+{{< figure src="/images/posts/japanese-keyboard-arch/gnome-settings-select-input-source.png" alt="Capture d'écran des paramètres du clavier sous GNOME - Ajout du clavier hiragana." position="center" caption="Sélection du clavier Japanese (Mozc:あ)." captionPosition="center">}}
 
-Pour changer de méthode d'entrée, le raccourci `<super> + <espace>` peut être employé. Enfin, lors de l'écriture, des *hiragana* s'affichent ainsi qu'une liste de mot. 
+Pour changer de méthode d'entrée, le raccourci `<super> + <espace>` peut être employé. Enfin, lors de l'écriture, des *hiragana* s'affichent ainsi qu'une liste de mots. 
 
-{{< figure src="/images/japanese-keyboard-arch/example.png" alt="Exemple d'utilisation du clavier japonais." position="center" caption="Exemple d'utilisation du clavier japonais." captionPosition="center">}}
+{{< figure src="/images/posts/japanese-keyboard-arch/example.png" alt="Exemple d'utilisation du clavier japonais." position="center" caption="La liste des mots." captionPosition="center">}}
 
 Cette liste peut être naviguée à l'aide de la touche `<espace>`, et une entrée peut être sélectionnée en confirmant avec `<enter>`.
