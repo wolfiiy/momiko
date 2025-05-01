@@ -1,7 +1,7 @@
 +++
 title = "Configurer le clavier japonais sous Arch Linux"
 date = "2025-04-10T19:29:48+02:00"
-lastmod = "2025-05-01T08:25:48+02:00"
+lastmod = "2025-05-01T10:01:48+02:00"
 author = "wolfiy"
 authorTwitter = "" #do not include @
 cover = ""

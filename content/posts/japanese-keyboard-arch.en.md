@@ -1,6 +1,7 @@
 +++
 title = "Configuring the Japanese keyboard on Arch Linux"
 date = "2025-04-10T19:29:48+02:00"
+lastmod = "2025-05-01T10:01:48+02:00"
 author = "wolfiy"
 authorTwitter = "" #do not include @
 cover = ""
@@ -144,4 +145,12 @@ Then, click on *Add input source* and choose *Japanese*.
 
 {{< figure src="/images/posts/japanese-keyboard-arch/gnome-settings-add-input-source.png" alt="Screenshot of the keyboard section of the GNOME settings - Input source choice." position="center" caption="Choosing the Japanese input source." captionPosition="center">}}
 
-Finally, scroll to "Japanese (Mozc:あ)". This variants defaults the keyboard to *kana* input.
+Finally, scroll to "Japanese (Mozc:あ)". This variants defaults the keyboard to *kana* input instead of *roumaji*.
+
+{{< figure src="/images/posts/japanese-keyboard-arch/gnome-settings-select-input-source.png" alt="Screenshot of the keyboard section of the GNOME settings - Adding hiragana keyboard." position="center" caption="Selecting the Japanese (Mozc:あ) keyboard." captionPosition="center">}}
+
+To change input method, the keyboard shortcut `<super> + <space>` can be used. When text is typed, a list of word suggestions appear.
+
+{{< figure src="/images/posts/japanese-keyboard-arch/example.png" alt="Japanese keyboard usage example." position="center" caption="The words list." captionPosition="center">}}
+
+One can navigate through that list using the `<space>` key. An entry can be selected using `<enter>`.
