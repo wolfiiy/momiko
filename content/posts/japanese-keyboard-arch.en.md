@@ -16,21 +16,35 @@ hideComments = false
 
 ### Fonts
 
-Japanese fonts must be installed. Be aware that some characters are slightly different in Chinese. I recommend installing Noto.
+By default, the system lacks Japanese fonts. Therefore, installing at least one font is necessary to properly display *kana* and *kanji* characters.
+
+I recommend using the *Noto* font, as it is fairly complete and distributed under a free (as in freedom) license.
 
 ```bash
 sudo pacman -S --needed noto-fonts noto-fonts-cjk
 ```
 
-More fonts can be found on the [wiki](https://wiki.archlinux.org/title/Localization/Japanese) and on Tatsumoto Ren's [blog](https://tatsumoto-ren.github.io/blog/resources.html#fonts).
+The first package will install the "base" font containing letters (Latin, Cyrillic, ...), while the second package focuses on logographs (*kanji*, *hanzi*, *hanja*, ...).
+
+More fonts can be found on the [Arch Wiki](https://wiki.archlinux.org/title/Localization/Japanese). A selection of fonts can also be found on Tatsumoto Ren's [blog](https://tatsumoto-ren.github.io/blog/resources.html#fonts).
+
+> Be careful as some characters are written differently in Chinese and Japanese! For instance, the `直` character lacks a vertical stroke on the left in Chinese[^1].
+
+[^1]: Wiktionary, *[直 - Alternative forms](https://en.wiktionary.org/wiki/%E7%9B%B4#Alternative_forms)* 
 
 ### Japanese locale
 
-Locales are used by locale-aware programs and libraries for rendering text, displaying regional monetary values, time and date formats and other locale-specific standards. If this has not been generated, some font rendering issues might appear[^1].
+Locales are used by the system to render fonts and format regional-specific elements (money, dates, time, ...). If a locale is missing, some font rendering issues might occur[^2].
 
-[^1]: Archwiki, *[Localization/Japanese](https://wiki.archlinux.org/title/Localization/Japanese)*
+[^2]: Archwiki, *[Localization/Japanese](https://wiki.archlinux.org/title/Localization/Japanese)*
 
-To add a Japanese locale to your system, modify the `/etc/locale.gen` file and uncomment the `ja_JP.UTF8 UTF8` line by removing the `#` at the beginning of the line. The file should look something like this:
+A locale can be added to the system via the `/etc/locale.gen` file, which is as a reference by the system when generating locales. To add the Japanese locale, uncomment the `ja_JP.UTF8 UTF8` by removing the leading `#`. Do not disable any already enabled locales.
+
+```bash
+sudo vim /etc/locale.gen
+```
+
+The file content should look something like this:
 
 ```cfg
 # File: /etc/locale.gen
@@ -43,9 +57,15 @@ ja_JP.UTF-8 UTF-8
 # ...
 ```
 
-Once modified, save it and run `locale-gen` to generate the locale(s). Both actions require root privileges (`sudo`).
+Once the line has been uncommented, save the file and run the following command to generate locales.
 
-You can verify that the Japanese locale has been properly enabled if it is listed in the output of the `locale -a` command which lists all enabled locales. For reference, I get the following output:
+```bash
+sudo locale-gen
+```
+
+You can then check if the Japanese locale has been properly enabled by listing all enabled locales using the `locale -a` command. The locale has been properly generated if `ja_JP.utf8` is present in the list.
+
+For reference, here is the output I get on my system:
 
 ```txt
 [akari@nyarch ~]$ locale -a
@@ -57,46 +77,71 @@ ja_JP.utf8
 POSIX
 ```
 
-## Installing and configuring the keyboard
+## Japanese keyboard
 
-A Japanese keyboard requires two components to work correctly:
+### Components
 
-- An input method framework (IMF) to let the user switch between IMEs.
-- An input method editor (IME) to convert Latin characters to Japanese kanas and kanjis.
+A Japanese keyboard requires two compenents to work correctly:
 
-On GTK-based environments (GNOME, Mate, ...), the commonly found IMF is called IBus, while on  Qt-based environments such as KDE Plasma, Fctix5 is more common. Both work with all IMEs.
+- An *input method editor* (IME), which converts Latin script into *kana* and *kanji*.
+- An *input method framework* (IMF) to let the user switch between IMEs.
 
-A variety of IMEs exist (see the [wiki](https://wiki.archlinux.org/title/Localization/Japanese#Input_Method_Editor_%28IME%29)), but the most used one is mozc, which is an open source project based on the Google Japanese Input. All packages can be found in the official repositories of Arch Linux, with the exception of `ibus-mozc` which sits in the AUR.
+There are two IMFs: [IBus](https://wiki.archlinux.org/title/IBus) and [Fctix5](https://wiki.archlinux.org/title/Fcitx5). The former is most commonly used on GTK-based environments such as GNOME or Mate, while the latter is preferred on Qt-based environments like KDE Plasma or LXQt. Both framework are compatible with all IMEs.
+
+The most commonly recommended IME seems[^3] to be [Mozc](https://github.com/google/mozc), which is the one I personnally use. It is an open-source project based on *Google Japanese Input*.
+
+[^3]: Alternatives can be found on the wiki: Archwiki, *[IME](https://wiki.archlinux.org/title/Localization/Japanese#Input_Method_Editor_%28IME%29)*
+
+### GTK
+
+On GTK-based environments, the `ibus` and `ibus-mozc` packages must be installed. Note that the former is available in the official *Arch Linux* repositories, while the latter must be installed from the AUR.
 
 ```bash
-# On GTK-based desktops
 sudo pacman -S ibus
 paru -S ibus-mozc
 ```
 
-```bash
-# On Qt-based desktops
-sudo pacman -S fcitx5-im fcitx5-mozc
-```
-
-Then, three or four environment variables must be set, depending on the IMF, which  done by adding the following lines to the `~/.config/environment.d/envvars.conf` file.
+Then, four environment variables must be added. This can be done by adding the following lines to the `~/.config/environment.d/envvars.conf` file (can be created if it does not exist).
 
 ```cfg
-# On GTK-based environments
+# File $HOME/.config/environment.d/envvars.conf
+# /!\ Works only on Wayland sessions /!\
 GTK_IM_MODULE=ibus
 QT_IM_MODULE=ibus
 XMODIFIERS=@im=ibus
 MOZC_IBUS_CANDIDATE_WINDOW=ibus
 ```
 
+### Qt
+
+On Qt-based environments, the packages `fcitx5-im` and `fcitx5-mozc` must be installed. Both can be found in the official *Arch Linux* repositories.
+
+```bash
+sudo pacman -S fcitx5-im fcitx5-mozc
+```
+
+With Fcitx5, only three environment variables are required. These can also be placed in the `~/.config/environment.d/envvars.conf` file, which can be created if it does not exists.
+
 ```cfg
-# On Qt-based environments
+# File $HOME/.config/environment.d/envvars.conf
+# /!\ Works only on Wayland sessions /!\
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
 ```
 
-Note that the environment variables for fcitx do not include a 5.
+Note that the environment variables for Fcitx do not include "5" in their values!
 
-Finally, you can add the keyboard layout to your session. On my system, which is based around GNOME, the input source can be added through the settings *Keyboard* > *Input Sources* > *Add Input Source* > *Japanese*.
+### Usage
 
+Once everything has been installed an configured, the Japanese keyboard can be used.
+
+Adding a new keyboard differs depending on the desktop environment or window manager / compositor. On GNOME-based systems, an input method can be added through the *Keyboard* section of the *Settings* application. 
+
+{{< figure src="/images/posts/japanese-keyboard-arch/gnome-settings-keyboard.png" alt="Screenshot of the keyboard section of the GNOME settings." position="center" caption="Keyboard settings on GNOME." captionPosition="center">}}
+
+Then, click on *Add input source* and choose *Japanese*.
+
+{{< figure src="/images/posts/japanese-keyboard-arch/gnome-settings-add-input-source.png" alt="Screenshot of the keyboard section of the GNOME settings - Input source choice." position="center" caption="Choosing the Japanese input source." captionPosition="center">}}
+
+Finally, scroll to "Japanese (Mozc:あ)". This variants defaults the keyboard to *kana* input.

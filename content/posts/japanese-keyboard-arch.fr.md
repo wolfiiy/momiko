@@ -141,7 +141,7 @@ L'ajout du clavier diffère selon l'environnement de bureau ou le *window manage
 
 {{< figure src="/images/posts/japanese-keyboard-arch/gnome-settings-keyboard.png" alt="Capture d'écran des paramètres du clavier sous GNOME." position="center" caption="Paramètres du clavier sous GNOME." captionPosition="center">}}
 
-Ensutie, cliquer sur "Ajouter une nouvelle méthode d'entrée" et sélectionner "Japonais".
+Ensuite, cliquer sur "Ajouter une nouvelle méthode d'entrée" et sélectionner "Japonais".
 
 {{< figure src="/images/posts/japanese-keyboard-arch/gnome-settings-add-input-source.png" alt="Capture d'écran des paramètres du clavier sous GNOME - Choix de la méthode d'entrée." position="center" caption="Choix de la méthode d'entrée sous GNOME." captionPosition="center">}}
 
