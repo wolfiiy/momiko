@@ -131,7 +131,7 @@ blog 300 IN CNAME wolfiiy.github.io.
 
 or, using my registrar's GUI:
 
-{{< figure src="/posts/assets/custom-domain-github/cname-registrar.png" alt="Adding a CNAME record for the blog subdomain" position="center" caption="Adding a CNAME record for the blog subdomain." captionPosition="center">}}
+{{< figure src="/images/posts/custom-domain-github/cname-registrar.png" alt="Adding a CNAME record for the blog subdomain" position="center" caption="Adding a CNAME record for the blog subdomain." captionPosition="center">}}
 
 ### Verification
 
@@ -175,27 +175,27 @@ wolfiiy.github.io.	3569	IN	A	185.199.111.153
 
 Now that the DNS has been configured, open the repository's *Github* page and, under *Settings* > *Pages* > *Custom domain*, enter your subdomain and click *Save*.
 
-{{< figure src="/posts/assets/custom-domain-github/dns-check-in-progress.png" alt="DNS check in progress" position="center" caption="DNS check in progress." captionPosition="center">}}
+{{< figure src="/images/posts/custom-domain-github/dns-check-in-progress.png" alt="DNS check in progress" position="center" caption="DNS check in progress." captionPosition="center">}}
 
 Once saved, a DNS check is done. This step can last a few minutes and, once over, the *DNS Check successful* message appears just below your subdomain.
 
-{{< figure src="/posts/assets/custom-domain-github/dns-check-successful.png" alt="DNS check successful" position="center" caption="DNS check successful." captionPosition="center">}}
+{{< figure src="/images/posts/custom-domain-github/dns-check-successful.png" alt="DNS check successful" position="center" caption="DNS check successful." captionPosition="center">}}
 
 ### HTTPS
 
 HTTPS can be enforced on the website by clicking the checkbox under the custom domain field. Note that this option might be temporarily unavailable if the domain was recently setup since a new certificate has to be generated.
 
-{{< figure src="/posts/assets/custom-domain-github/cert-01.png" alt="First step of the certificate generation process" position="center" caption="First step of the certificate generation process." captionPosition="center">}}
+{{< figure src="/images/posts/custom-domain-github/cert-01.png" alt="First step of the certificate generation process" position="center" caption="First step of the certificate generation process." captionPosition="center">}}
 
-{{< figure src="/posts/assets/custom-domain-github/cert-02.png" alt="Second step of the certificate generation process" position="center" caption="Second step of the certificate generation process." captionPosition="center">}}
+{{< figure src="/images/posts/custom-domain-github/cert-02.png" alt="Second step of the certificate generation process" position="center" caption="Second step of the certificate generation process." captionPosition="center">}}
 
-{{< figure src="/posts/assets/custom-domain-github/cert-03.png" alt="Last step of the certificate generation process" position="center" caption="Last step of the certificate generation process." captionPosition="center">}}
+{{< figure src="/images/posts/custom-domain-github/cert-03.png" alt="Last step of the certificate generation process" position="center" caption="Last step of the certificate generation process." captionPosition="center">}}
 
 In theory, the process can take up to 24 hours. In parctice, a dozen minutes is enough.
 
 Finally, the *Enforce HTTPS* checkbox can be toggled.
 
-{{< figure src="/posts/assets/custom-domain-github/enforce-https.png" alt="Enforcing HTTPS" position="center" caption="Enforcing HTTPS." captionPosition="center">}}
+{{< figure src="/images/posts/custom-domain-github/enforce-https.png" alt="Enforcing HTTPS" position="center" caption="Enforcing HTTPS." captionPosition="center">}}
 
 ### Potential issues
 

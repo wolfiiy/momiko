@@ -131,7 +131,7 @@ blog 300 IN CNAME wolfiiy.github.io.
 
 ou, via l'interface web de mon *registrar*:
 
-{{< figure src="/posts/assets/custom-domain-github/cname-registrar.png" alt="Ajout d'un enregistrement CNAME pour le sous domaine blog" position="center" caption="Ajout d'un enregistrement CNAME pour le sous domaine blog." captionPosition="center">}}
+{{< figure src="/images/posts/custom-domain-github/cname-registrar.png" alt="Ajout d'un enregistrement CNAME pour le sous domaine blog" position="center" caption="Ajout d'un enregistrement CNAME pour le sous domaine blog." captionPosition="center">}}
 
 ### Vérification
 
@@ -175,27 +175,27 @@ wolfiiy.github.io.	3569	IN	A	185.199.111.153
 
 Une fois la configuration du DNS validée, accéder au dépôt concerné sur *Github*. Sous *Settings* > *Pages* > *Custom domaine*, entrer le sous domaine à utiliser et cliquer sur *save*.
 
-{{< figure src="/posts/assets/custom-domain-github/dns-check-in-progress.png" alt="Vérification du DNS en cours" position="center" caption="Vérification du DNS en cours." captionPosition="center">}}
+{{< figure src="/images/posts/custom-domain-github/dns-check-in-progress.png" alt="Vérification du DNS en cours" position="center" caption="Vérification du DNS en cours." captionPosition="center">}}
 
 Ensuite, une vérification DNS s'effectue alors et, après quelques minutes, le message *DNS Check successful* apparait.
 
-{{< figure src="/posts/assets/custom-domain-github/dns-check-successful.png" alt="Vérification du DNS terminée" position="center" caption="Vérification du DNS terminée." captionPosition="center">}}
+{{< figure src="/images/posts/custom-domain-github/dns-check-successful.png" alt="Vérification du DNS terminée" position="center" caption="Vérification du DNS terminée." captionPosition="center">}}
 
 ### HTTPS
 
 Juste en dessous du champ permettant d'ajouter un domaine, une case à cocher permet de forcer le passage du trafic en HTTPS. Si cette option est grisée, attendre quelques minutes afin qu'un certificat soit généré.
 
-{{< figure src="/posts/assets/custom-domain-github/cert-01.png" alt="Première étape de la génération du certificat" position="center" caption="Première étape de la génération du certificat." captionPosition="center">}}
+{{< figure src="/images/posts/custom-domain-github/cert-01.png" alt="Première étape de la génération du certificat" position="center" caption="Première étape de la génération du certificat." captionPosition="center">}}
 
-{{< figure src="/posts/assets/custom-domain-github/cert-02.png" alt="Seconde étape de la génération du certificat" position="center" caption="Seconde étape de la génération du certificat." captionPosition="center">}}
+{{< figure src="/images/posts/custom-domain-github/cert-02.png" alt="Seconde étape de la génération du certificat" position="center" caption="Seconde étape de la génération du certificat." captionPosition="center">}}
 
-{{< figure src="/posts/assets/custom-domain-github/cert-03.png" alt="Dernière étape de la génération du certificat" position="center" caption="Dernière étape de la génération du certificat." captionPosition="center">}}
+{{< figure src="/images/posts/custom-domain-github/cert-03.png" alt="Dernière étape de la génération du certificat" position="center" caption="Dernière étape de la génération du certificat." captionPosition="center">}}
 
 Ce processus peut théoriquement durer jusqu'à 24 heures, mais dans les faits, une dizaine de minutes suffit largement.
 
 Enfin, la case *Enforce HTTPS* peut être cochée.
 
-{{< figure src="/posts/assets/custom-domain-github/enforce-https.png" alt="Forcer le trafic en HTTPS" position="center" caption="Forcer le trafic en HTTPS." captionPosition="center">}}
+{{< figure src="/images/posts/custom-domain-github/enforce-https.png" alt="Forcer le trafic en HTTPS" position="center" caption="Forcer le trafic en HTTPS." captionPosition="center">}}
 
 ### Problèmes potentiels
 

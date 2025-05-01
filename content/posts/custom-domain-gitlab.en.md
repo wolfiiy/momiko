@@ -26,7 +26,7 @@ which is the config used for my own website.
 You can also add a new file from your GitLab itself by clicking the "+" button on your repository. Choose the `.gitlab-ci.yml` template type and choose the one
 that fits your project the best (under "Pages"). For this blog, I chose HTML. Add a commit message and hit the "Commit changes" button. 
 
-{{< figure src="/posts/assets/custom-domain-gitlab/gitlab-ci.png" alt="Selecting a CI template" position="center" caption="Selecting a CI template" captionPosition="center" >}}
+{{< figure src="/images/posts/custom-domain-gitlab/gitlab-ci.png" alt="Selecting a CI template" position="center" caption="Selecting a CI template" captionPosition="center" >}}
 
 If you go back to your repository you will see that next to your latest commit a blue circle will have appeared. Give it a couple of minutes and upon refreshing the page it will turn into
 a green tick: the deployment is over and your website should be available at `https://username.gitlab.io/repository`.
