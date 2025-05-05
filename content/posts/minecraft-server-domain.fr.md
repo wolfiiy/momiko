@@ -71,3 +71,11 @@ Ensuite, créer un enregistrement de type `SRV` paramétré ainsi:
 {{< figure src="/images/posts/minecraft-server-domain/srv-record.png" alt="Paramètrage de l'enregistrement de type SRV." position="center" caption="Création de l'enregistrement de type SRV." captionPosition="center">}}
 
 #### Cas spécifique: *selfhost*
+
+Si le serveur *Minecraft* est auto-hébergé, il y a quelques éléments à prendre en considération:
+
+1. Il est judicieux de mettre en place un DDNS afin d'éviter de devoir mettre à jour manuellement la correspondance entre l'IP publique de la maison et le nom de domaine (i.e. l'enregistrement de type `A`).
+2. Il ne faut pas oublier d'ouvrir le port associé au serveur *Minecraft* sur le *router*.
+3. Un *reverse proxy* peut être utilisé pour rediriger le trafic vers le bon serveur.
+
+Personnellement, je gère...
