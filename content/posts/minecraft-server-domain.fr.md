@@ -31,21 +31,43 @@ La zone DNS permet de configurer le nom de domaine (i.e. créer des sous domaine
 
 Selon le *registrar*, l'accès à la zone DNS peut être différent. Dans mon cas, avec un domaine enregistré chez *Infomaniak*, il faut passer par la page de gestion (le "Manager"), sélectionner *Domain* sous *Web & Domains*, choisir le domaine à configurer puis, finalement, cliquer sur *DNS Zone* dans la barre latérale gauche.
 
+Depuis cette page, un bouton devrait permettre de créer de nouveaux enregistrements DNS et / ou de directement modifier les *zonefiles*.
+
 ### Enregistrements DNS
 
-Imaginons que le domaine à utiliser soit `exemple.ch`, et que l'on veuille lier un serveur *Minecraft* au sous-domaine `mc.exemple.ch`.
+Imaginons que le domaine à utiliser soit `exemple.ch`, et que l'on veuille lier un serveur *Minecraft* au sous-domaine `mc.exemple.ch`. Deux enregistrements seront alors nécessaires:
 
-#### Serveur hébergé
+1. Un enregistrement de type `A` pour faire correspondre le (sous-)domaine à l'adresse IP du serveur hébergeant l'instance de *Minecraft*.
+2. Un enregistrement de type `SRV` afin de préciser aux serveurs DNS qu'il s'agit de "trafic *Minecraft*".
 
-Dans le cas d'un serveur hégergé chez un tiers, deux enregistrements devront être créés:
+> Dans le cadre d'un serveur auto-hébergé (*selfhost*), il est vivement conseillé de mettre en place un DDNS et de remplacer l'enregistrement de type `A` par un `CNAME` pointant vers le DDNS.
 
-1. Un enregistrement de type `A` pour aire correspondre le (sous-)domaine à l'adresse IP du serveur hébergant l'instance de *Minecraft*.
-2. Un enregistrement de type `SRV` afin de préciser au serveurs DNS qu'il s'agit de "trafic *Minecraft*".
+#### A
 
-Depuis l'éditeur de zone DNS du *registrar*, créer un nouvel enregistrement de type `A`. La source sera le sous-domaine (p.ex. `mc.`), et la cible doit contenir l'adresse IP du serveur *Minecraft*.
+D'abord, ajouter un enregistrement de type `A`:
+
+- Type: `A`
+- Source: `mc` (sous-domaine à utiliser, ce qui donnera ici `mc.exemple.ch`)
+- Target: `aaa.bbb.ccc.ddd` (adresse IP publique du serveur *Minecraft*)
+- TTL: `300` (5 mins)
+
+Si le serveur est doté d'une adresse IPv6, il est possible d'effectuer la même procédure en choisissant un enregistrement de type `AAAA`.
 
 {{< figure src="/images/posts/minecraft-server-domain/a-record.png" alt="Paramètrage de l'enregistrement de type A." position="center" caption="Création de l'enregistrement de type A." captionPosition="center">}}
 
-Ensuite, créer un enregistrement de type `SRV`. La procédure est la même, mais il y a quelques paramètres supplémentaires à spécifier:
+#### SRV
 
-- 
+Ensuite, créer un enregistrement de type `SRV` paramétré ainsi:
+
+- Type: `SRV`
+- Service: Minecraft
+- Protocol: `tcp.mc` (`tcp.` suivi du sous-domaine défini précédemment)
+- Weight: 5
+- Port: `25565` (ou autre si le port à été changé dans le `server.properties`)
+- Target: `mc.example.ch` (selon ce qui a été défini précédemment)
+- TTL: 5 mins
+- Priority: 10
+
+{{< figure src="/images/posts/minecraft-server-domain/srv-record.png" alt="Paramètrage de l'enregistrement de type SRV." position="center" caption="Création de l'enregistrement de type SRV." captionPosition="center">}}
+
+#### Cas spécifique: *selfhost*
