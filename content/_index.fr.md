@@ -13,4 +13,4 @@ hideComments = false
 
 # Bienvenue
 
-Bonjour! 
+Bonjour et bienvenue sur mon blog!
