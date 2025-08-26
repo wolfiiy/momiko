@@ -13,4 +13,4 @@ hideComments = false
 
 # Bienvenue
 
-Bonjour et bienvenue sur mon blog!
+Bonjour et bienvenue sur mon blog! Les derniers articles sont listés ci-dessous.
