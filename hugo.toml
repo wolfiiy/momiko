@@ -1,4 +1,4 @@
-baseurl = "https://blog.wolfiy.ch"
+baseurl = "https://www.momiko.moe"
 languageCode = "en-us"
 theme = "terminal"
 pagination.pagerSize = 10
