@@ -12,9 +12,7 @@ draft = false
 
 # Projets
 
-## Développement
-
-### Start page
+## Start page
 
 A few years back, I began ricing my computer. In order to match my browser with the rest of the OS, I made my own start page. Since then, a lot of changes have been made, but the page itself remains easy to set up and customize.
 
@@ -25,7 +23,7 @@ Nowadays, it supports both dark and light themes, and it works with multiple ima
 Repository: https://gitlab.com/wolfiy/wlfys-minimal-startpage  
 Live demo: https://start.wolfiy.ch/
 
-### Javelo
+## Javelo
 
 Javelo is an application that can be used to plan bicyle trips throughout Switzerland. When at least two pins have been added to the map, the best route is found, and a graph pops up to show elevation informations. Once generated, the route can be exported to a `.gpx` file.
 
@@ -35,14 +33,11 @@ This application has been made with a friend during my second semester of comput
 
 Repository: https://gitlab.com/wolfiy/CS-108p
 
-## Self host
+## Linktree
 
-WIP
+Wanting to avoid relying on third party services, I decided to write my own "Linktree" replacement.
 
-## VFX
+![Linktree](https://go.wolfiy.ch/assets/img/projects/linktree.png)
 
-WIP
-
-## Autres
-
-WIP
+Repository: https://gitlab.com/wolfiy/linktree  
+Live demo: https://linktree.wolfiy.ch/
