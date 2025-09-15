@@ -5,7 +5,7 @@ pagination.pagerSize = 10
 defaultContentLanguage = "fr"
 defaultContentLanguageInSubdir = true
 disableDefaultLanguageRedirect = false
-Copyright = "Copyright © <a href='https://lintree.wolfiy.ch'>wolfiy</a> 2025"
+Copyright = "Copyright © <a href='https://linktree.wolfiy.ch'>wolfiy</a> 2025"
 
 # Required by GithHub pages
 [caches]
