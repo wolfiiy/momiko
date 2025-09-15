@@ -122,6 +122,11 @@ Copyright = "Copyright © <a href='https://linktree.wolfiy.ch'>wolfiy</a> 2025"
           url = "/en/tags"
           weight = 30
         [[languages.en.menu.main]]
+          identifier = "projects"
+          name = "Projects"
+          url = "/en/pages/projects"
+	        weight = 35
+        [[languages.en.menu.main]]
           identifier = "links"
           name = "Links"
           url = "https://linktree.wolfiy.ch/"
@@ -173,6 +178,11 @@ Copyright = "Copyright © <a href='https://linktree.wolfiy.ch'>wolfiy</a> 2025"
           name = "Tags"
           url = "/fr/tags"
 	        weight = 30
+        [[languages.fr.menu.main]]
+          identifier = "projects"
+          name = "Projets"
+          url = "/fr/pages/projects"
+	        weight = 35
         [[languages.fr.menu.main]]
           identifier = "links"
           name = "Liens"
