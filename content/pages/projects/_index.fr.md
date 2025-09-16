@@ -22,11 +22,18 @@ Le thème sombre d'Anilist étant bleu, j'ai décidé de créer mon propre style
 
 Dépôt Git: https://gitlab.com/wolfiy/anilist-black-theme
 
+## Edits
+
+Lorsque j'étais plus jeune, j'ai réalisé quelques *edits* sur des jeux comme *Call of Duty*, ce qui m'a permis de me familiariser avec la suite *Adobe*. Une bonne partie est maintenant non répertoriée, mais tout peut être retrouvé dans une playlist dédiée.
+
+Chaine: https://youtube.com/DarkWolfiiy  
+Dernière vidéo: https://youtube.com/watch?v=XDFgXyqNPzk
+
 ## Homelab
 
 Lors des confinements du COVID-19, j'ai décidé d'héberger un serveur *Mincraft* à l'aide d'un vieux PC pour jouer avec quelques amis. Ce qui a commencé par être un moyen d'économiser sur les frais d'hébergement s'est finalement transformer en un véritable *homelab*. A ce jour, quasiment tout le *hardware* que j'utilisais en 2020 a été remplacé.
 
-![Panneau Proxmox](https://go.wolfiy.ch/assets/img/projects/homeserver.png)
+{{< image src="https://go.wolfiy.ch/assets/img/projects/homeserver.png" alt="Dashboard de Proxmox" position="center" style="width: 80%;" >}}
 
 Le serveur principal, sous Proxmox, est basé sur un Ryzen 9 5900x, 128 Gb de DDR4 ECC et un total d'un peu plus de 72 Tb de stockage en RAIDZ2. Le NAS est virtualisé, mais un controlleur dédié (LSI 9201-8i) permet un accès direct aux disques sans aucune abstraction.
 
@@ -36,7 +43,7 @@ Ce serveur est utilisé pour toute une variété de services: médias, automatio
 
 Javelo est une application permettant de planifier des itinéraires à vélo sur le territoire suisse. Lorsqu'au moins deux points ont été ajoutés à la carte, le chemin le plus rapide et adapté aux cyclistes est trouvé, et une courbe permettant de visualiser le dénivelé s'affiche. Une fois générée, la route peut être exportée au format `.gpx`.
 
-![Affichage de Javelo](https://gitlab.com/wolfiy/wolfiy.gitlab.io/-/raw/master/assets/img/projects/javelo.png)
+{{< image src="https://gitlab.com/wolfiy/wolfiy.gitlab.io/-/raw/master/assets/img/projects/javelo.png" alt="Affichage de Javelo" position="center" style="width: 70%;" >}}
 
 Cette application a été réalisée à l'aide d'un ami lors de mon second semestre d'informatique à l'EPFL. Elle a été écrite en Java et l'interface est basée sur JavaFX.
 
@@ -46,52 +53,76 @@ Dépôt Git: https://gitlab.com/wolfiy/CS-108p
 
 Ne voulant pas dépendre d'un service tiers, j'ai décidé de créer mon propre remplacement aux services de type "Linktree". La page s'adapte automatiquement au thème (clair ou sombre) du navigateur.
 
-![Linktree](https://go.wolfiy.ch/assets/img/projects/linktree.png)
+{{< image src="https://go.wolfiy.ch/assets/img/projects/linktree.png" alt="Page d'accueil du link tree" position="center" style="width: 75%;" >}}
 
 Dépôt Git: https://gitlab.com/wolfiy/linktree  
 Démo live: https://linktree.wolfiy.ch/
+
+## Mastermind
+
+Mastermind est un projet en deux parties réalisé au début de la formation d'informaticien à l'ETML. En première lieue, une version CLI a été créée afin de se familiariser avec les bases du C#. 
+
+{{< image src="https://go.wolfiy.ch/assets/img/projects/mastermind.png" alt="Partie terminée de Mastermind (CLI)" position="center" style="width: 60%;" >}}
+
+Quelques semaines plus tard, cette base a été reprise et portée sur Windows Form. La version GUI supportent différents thèmes, propose un mode debug, un mode triche et est localisé en plusieur langues.
+
+{{< image src="https://gitlab.com/wolfiy/etml-i404-mastermind-gui/-/raw/master/screenshots/won.PNG" alt="Partie terminée de Mastermind (GUI)" position="center" style="width: 20%;" >}}
+
+Dépôt Git (CLI): https://gitlab.com/wolfiy/etml-i403-mastermind  
+Dépôt Git (GUI): https://gitlab.com/wolfiy/etml-i404-mastermind-gui
 
 ## Sites web
 
 L'ensemble des sites webs que j'ai réalisés sont *open source*.
 
-![Page d'accueil](https://go.wolfiy.ch/assets/img/projects/website.png)
+{{< image src="https://go.wolfiy.ch/assets/img/projects/website.png" alt="Page d'accueil d'une ancienne version du site" position="center" style="width: 80%;" >}}
 
 Site: https://go.wolfiy.ch/ ([α](https://go.wolfiy.ch/v1/index.html), [β](https://go.wolfiy.ch/v2/index.html))  
 Blog: https://www.momiko.moe/fr
 
 Dépôt Git (go.wolfiy.ch): https://gitlab.com/wolfiy/wolfiy.gitlab.io  
-Dépôt Git (www\.momiko.moe): https://github.com/wolfiiy/momiko 
+Dépôt Git (www\.momiko.moe): https://github.com/wolfiiy/momiko
+
+## Spicy Invaders
+
+Spicy Invaders est un clone du jeu *Space Invaders* réalisé en C# dans le cadre du cours de pratique de la programmation orientée objet à l'ETML. Nous avions beaucoup de liberté quant à l'implémentation et l'ajout de fonctionnalités.
+
+{{< image src="https://go.wolfiy.ch/assets/img/projects/spicy-invaders.png" alt="Ecran de jeu de Spicy Invaders" position="center" style="width: 60%;" >}}
+
+Ma version du jeu propose trois niveaux de difficultés, plusieurs types d'ennemis, du son ainsi qu'un *framerate* ajustable.
+
+En terme d'implémentation, mon jeu suit le *design pattern* MVC. Il est très modulable (bonne séparation des objets, classes et interfaces). La librairie NAudio a été utilisée pour les sons et un installateur est fournit.
+
+Dépôt Git: https://gitlab.com/wolfiy/spicy-invaders
 
 ## Start page
 
 Il y a quelques années, j'ai commencé à *rice* mon OS. Voulant créer un visuel cohérent, j'ai créé ma propre *start page* pour mon navigateur. Elle a subi de nombreuses modifications depuis, mais elle reste relativement simple à mettre en place et à personnaliser.
 
-![Affichage de la start page](https://gitlab.com/wolfiy/wolfiy.gitlab.io/-/raw/master/assets/img/projects/startpage.png)
+{{< image src="https://gitlab.com/wolfiy/wolfiy.gitlab.io/-/raw/master/assets/img/projects/startpage.png" alt="Affichage de la start page" position="center" style="width: 80%;" >}}
 
 Aujourd'hui, elle supporte les thèmes clair et sombre, et plusieurs images peuvent être utilisée.
 
 Dépôt Git: https://gitlab.com/wolfiy/wlfys-minimal-startpage  
 Démo live: https://start.wolfiy.ch/
 
-## Edits
-
-WIP
-
 ## Anilist Badges
-WIP
+
+Quand j'ai rejoint la communauté Anilist, je suis tombé sur des événements organisés par différents groupes (AL-Badges, Kusogaki, AWC, ...), et j'ai décidé d'apporter ma contribution en créant un set de badges. Je n'ai pas prévu d'en faire de nouveaux, mais tous les badges ainsi que les fichiers `.psd` ont été archivés dans un dépôt Git. Sentez-vous libre de les réutiliser!
+
+Archive: https://gitlab.com/wolfiy/alb/
 
 ## Automail
-WIP
 
-## Rice
-WIP
+J'ai contribué au développement du script Automail pour Anilist (une collection d'améliorations et de traductions utilisateurs pour le site de *tracking*) en y ajoutant une traduction française.
 
-## Mastermind
-WIP
-
-## Spicy Invaders
-WIP
+Dépôt Git: https://github.com/hohMiyazawa/Automail
 
 ## RATP
-WIP
+etml project where we had to rethink the ratp's ticket machines' ui/ux. we had to sketch a mockup and implement it using windows form.
+
+the interface supports five languages and their respective locales. the code follows the mvc design pattern and proper i18n practices.
+
+made with c# dotnet 8. 
+
+Dépôt Git: https://gitlab.com/wolfiy/ticket-machine-redesign
