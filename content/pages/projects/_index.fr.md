@@ -18,13 +18,13 @@ Ces projets sont classés par ordre alphabétique.
 
 Quand j'ai rejoint la communauté Anilist, je suis tombé sur des événements organisés par différents groupes (AL-Badges, Kusogaki, AWC, ...), et j'ai décidé d'apporter ma contribution en créant un set de badges. Je n'ai pas prévu d'en faire de nouveaux, mais tous les badges ainsi que les fichiers `.psd` ont été archivés dans un dépôt Git. Sentez-vous libre de les réutiliser!
 
-Archive: https://gitlab.com/wolfiy/alb/
+Lien: [Archive](https://gitlab.com/wolfiy/alb/)
 
 ## Automail
 
 J'ai contribué au développement du script Automail pour Anilist (une collection d'améliorations et de traductions utilisateurs pour le site de *tracking*) en y ajoutant une traduction française.
 
-Dépôt Git: https://github.com/hohMiyazawa/Automail
+Lien: [Git](https://github.com/hohMiyazawa/Automail)
 
 ## Black Anilist
 
@@ -32,21 +32,19 @@ Le thème sombre d'Anilist étant bleu, j'ai décidé de créer mon propre style
 
 {{< image src="https://go.wolfiy.ch/assets/img/projects/black-al.png" alt="Thème Anilist sombre" position="center" style="width: 80%;" >}}
 
-Dépôt Git: https://gitlab.com/wolfiy/anilist-black-theme
+Lien: [Git](https://gitlab.com/wolfiy/anilist-black-theme)
 
 ## Blog
 
 Le site sur lequel vous vous trouvez est également un projet à part entière. Il a été réalisé à l'aide du programme Hugo, et complété d'un thème personnalisé tiré d'un projet existant appelé "Hugo Theme Terminal".
 
-Dépôt Git du site: https://github.com/wolfiiy/momiko  
-Dépôt Git du thème: https://github.com/wolfiiy/hugo-theme-momiko-terminal
+Liens: [Git (site)](https://github.com/wolfiiy/momiko) | [Git (thème)](https://github.com/wolfiiy/hugo-theme-momiko-terminal)
 
 ## Edits
 
 Lorsque j'étais plus jeune, j'ai réalisé quelques *edits* sur des jeux comme *Call of Duty*, ce qui m'a permis de me familiariser avec la suite *Adobe*. Une bonne partie est maintenant non répertoriée, mais tout peut être retrouvé dans une playlist dédiée.
 
-Chaine: https://youtube.com/DarkWolfiiy  
-Dernière vidéo: https://youtube.com/watch?v=XDFgXyqNPzk
+Liens: [Chaine](https://youtube.com/DarkWolfiiy) | [Dernier edit](https://youtube.com/watch?v=XDFgXyqNPzk)
 
 ## Homelab
 
@@ -66,7 +64,7 @@ Javelo est une application permettant de planifier des itinéraires à vélo sur
 
 Cette application a été réalisée à l'aide d'un ami lors de mon second semestre d'informatique à l'EPFL. Elle a été écrite en Java et l'interface est basée sur JavaFX.
 
-Dépôt Git: https://gitlab.com/wolfiy/CS-108p
+Lien: [Git](https://gitlab.com/wolfiy/CS-108p)
 
 ## Linktree
 
@@ -74,8 +72,7 @@ Ne voulant pas dépendre d'un service tiers, j'ai décidé de créer mon propre 
 
 {{< image src="https://go.wolfiy.ch/assets/img/projects/linktree.png" alt="Page d'accueil du link tree" position="center" style="width: 75%;" >}}
 
-Dépôt Git: https://gitlab.com/wolfiy/linktree  
-Démo live: https://linktree.wolfiy.ch/
+Liens: [Git](https://gitlab.com/wolfiy/linktree) | [Démo](https://linktree.wolfiy.ch/)
 
 ## Mastermind
 
@@ -87,8 +84,7 @@ Quelques semaines plus tard, cette base a été reprise et portée sur Windows F
 
 {{< image src="https://gitlab.com/wolfiy/etml-i404-mastermind-gui/-/raw/master/screenshots/won.PNG" alt="Partie terminée de Mastermind (GUI)" position="center" style="width: 20%;" >}}
 
-Dépôt Git (CLI): https://gitlab.com/wolfiy/etml-i403-mastermind  
-Dépôt Git (GUI): https://gitlab.com/wolfiy/etml-i404-mastermind-gui
+Liens: [Git (CLI)](https://gitlab.com/wolfiy/etml-i403-mastermind) | [Git (GUI)](https://gitlab.com/wolfiy/etml-i404-mastermind-gui)
 
 ## RATP
 
@@ -98,7 +94,7 @@ Dans ce projet réalisé à l'ETML, j'ai repensé l'interface utilisateur des au
 
 L'application est localisée dans cinq langues. Le code suit le patron de conception MVC et suit les bonnes pratiques i18n.
 
-Dépôt Git: https://gitlab.com/wolfiy/ticket-machine-redesign
+Lien: [Git](https://gitlab.com/wolfiy/ticket-machine-redesign)
 
 ## Sites web
 
@@ -106,11 +102,8 @@ L'ensemble des sites webs que j'ai réalisés sont *open source*.
 
 {{< image src="https://go.wolfiy.ch/assets/img/projects/website.png" alt="Page d'accueil d'une ancienne version du site" position="center" style="width: 80%;" >}}
 
-Site: https://go.wolfiy.ch/ ([α](https://go.wolfiy.ch/v1/index.html), [β](https://go.wolfiy.ch/v2/index.html))  
-Blog: https://www.momiko.moe/fr
-
-Dépôt Git (go.wolfiy.ch): https://gitlab.com/wolfiy/wolfiy.gitlab.io  
-Dépôt Git (www\.momiko.moe): https://github.com/wolfiiy/momiko
+Démo: [Site](https://go.wolfiy.ch/) ([α](https://go.wolfiy.ch/v1/index.html), [β](https://go.wolfiy.ch/v2/index.html)) | [Blog](https://www.momiko.moe/fr)  
+Git: [Site](https://gitlab.com/wolfiy/wolfiy.gitlab.io) | [Blog](https://github.com/wolfiiy/momiko)
 
 ## Spicy Invaders
 
@@ -122,7 +115,7 @@ Ma version du jeu propose trois niveaux de difficultés, plusieurs types d'ennem
 
 En termes d'implémentation, mon jeu suit le *design pattern* MVC. Il est très modulable (bonne séparation des objets, classes et interfaces). La librairie NAudio a été utilisée pour les sons et un installateur est fourni.
 
-Dépôt Git: https://gitlab.com/wolfiy/spicy-invaders
+Lien: [Git](https://gitlab.com/wolfiy/spicy-invaders)
 
 ## Start page
 
@@ -132,5 +125,4 @@ Il y a quelques années, j'ai commencé à *rice* mon OS. Voulant créer un visu
 
 Aujourd'hui, elle supporte les thèmes clair et sombre, et plusieurs images peuvent être utilisée.
 
-Dépôt Git: https://gitlab.com/wolfiy/wlfys-minimal-startpage  
-Démo live: https://start.wolfiy.ch/
+Liens: [Git](https://gitlab.com/wolfiy/wlfys-minimal-startpage) | [Démo](https://start.wolfiy.ch/)
