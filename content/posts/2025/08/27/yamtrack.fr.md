@@ -24,7 +24,7 @@ complétés ou en cours de visionnage/lecture/jeu. Il permet aussi de noter les
 entrées, de créer et gérer des collections de média, de visualiser des
 statistiques et propose un calendrier facilitant le suivi des sorties. 
 
-Des options d'import de données sont disponibles, facilitant ainsi la migration
+Des options d'importation de données sont disponibles, facilitant ainsi la migration
 depuis des plateformes célèbres[^1]. Malheureusement, cette application ne permet
 pas encore le suivi de musique comme
 *[RateYourMusic](https://rateyourmusic.com/)* le propose.
@@ -42,7 +42,7 @@ en progression. Les petits boutons `+` et `-` situés sous le titre des entrées
 
 {{< figure src="/images/posts/2025/08/27/yamtrack/home.png" alt="Page d'accueil de Yamtrack." position="center" caption="Page d'accueil de Yamtrack." captionPosition="center">}}
 
-### Gestions d'entrées
+### Gestion d'entrées
 
 Pour rechercher une oeuvre, il suffit d'entrer son titre dans la barre de
 recherche supérieure. Attention à sélectionner le bon type de média afin de
@@ -63,7 +63,7 @@ Dans le cas d'une série ou d'un anime, il est possible d'afficher la liste des 
 
 Depuis cette vue, un épisode peut être marqué comme étant visionné en cliquant sur le bouton bleu-violet contenant une icône d'oeil.
 
-Une entrée (film, série, saison, jeu, livre) peut être éditée à l'aide du bouton "Add to tracker", qui ouvre un pop up permettant d'en définir le statut, d'y ajouter une note ("Score") et un mémo ("Note").
+Une entrée (film, série, saison, jeu, livre) peut être éditée à l'aide du bouton "Add to tracker", qui ouvre un pop-up permettant d'en définir le statut, d'y ajouter une note ("Score") et un mémo ("Note").
 
 {{< figure src="/images/posts/2025/08/27/yamtrack/add.png" alt="Ajout d'une entrée." position="center" caption="Ajout d'une entrée." captionPosition="center">}}
 
@@ -137,7 +137,7 @@ services:
 
 Pour masquer les images choquantes, les variables `MAL_NSFW`, `MU_NSFW` et `IGDB_NSFW` peuvent être définies sur `false`.
 
-Les valeurs renseignée au format `${VALEUR}` sont contenues dans un fichier nommé `.env` situé juste à côté du *compose file*, peuplé ainsi:
+Les valeurs renseignées au format `${VALEUR}` sont contenues dans un fichier nommé `.env` situé juste à côté du *compose file*, peuplé ainsi:
 
 ```env
 SECRET=***
