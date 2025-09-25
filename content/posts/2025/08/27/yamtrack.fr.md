@@ -151,7 +151,7 @@ DB_PASSWORD=***
 
 Pour des raisons de confidentialité, certaines valeurs ont été offusquées et remplacées par la chaine `***`. Ces valeurs sont à adapter selon vos préférences et votre infrastructure.
 
-Le conteneur peut ensuite être démarré et, l'application peut être accédée via la paire adresse IP de l'hôte et port défini sous `ports` dans le fichier `docker-compose.yml`. 
+Le conteneur peut ensuite être démarré et, l'application est accessible via la paire adresse IP de l'hôte et port défini sous `ports` dans le fichier `docker-compose.yml`. 
 
 {{< figure src="/images/posts/2025/08/27/yamtrack/login.png" alt="Formulaire de connexion." position="center" caption="Formulaire de connexion." captionPosition="center">}}
 

@@ -48,7 +48,7 @@ Liens: [Chaine](https://youtube.com/DarkWolfiiy) | [Dernier edit](https://youtub
 
 ## Homelab
 
-Lors des confinements du COVID-19, j'ai décidé d'héberger un serveur *Mincraft* à l'aide d'un vieux PC pour jouer avec quelques amis. Ce qui a commencé par être un moyen d'économiser sur les frais d'hébergement s'est finalement transformer en un véritable *homelab*. A ce jour, quasiment tout le *hardware* que j'utilisais en 2020 a été remplacé.
+Lors des confinements du COVID-19, j'ai décidé d'héberger un serveur *Minecraft* à l'aide d'un vieux PC pour jouer avec quelques amis. Ce qui a commencé par être un moyen d'économiser sur les frais d'hébergement s'est finalement transformé en un véritable *homelab*. A ce jour, quasiment tout le *hardware* que j'utilisais en 2020 a été remplacé.
 
 {{< image src="https://go.wolfiy.ch/assets/img/projects/homeserver.png" alt="Dashboard de Proxmox" position="center" style="width: 80%;" >}}
 
