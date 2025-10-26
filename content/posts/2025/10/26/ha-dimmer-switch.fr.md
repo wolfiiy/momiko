@@ -56,6 +56,13 @@ Un script peut être créé depuis *Settings*, *Automations & scenes* sous l'ong
 
 ### Bouton "On"
 
+Tout d'abord, un sélecteur de scène doit être créé. Celui-ci peut être créé depuis *Settings*, *Devices & services*, *Helpers*, *Create helper* et en sélectionnant le type *Dropdown*.
+
+{{< figure src="/images/posts/2025/10/26/ha-dimmer-switch/dropdown.png" alt="Création du sélecteur de scènes." position="center" caption="Création du sélecteur de scènes." captionPosition="center">}}
+
+Sous *Options*, ajouter les différentes scènes à activer avec le bouton "On" puis confirmer en cliquant sur *Create*.
+
+Ensuite, il faut mettre en place l'*automation*. Depuis *Settings*, *Automations & scenes*, sous l'onglet *Automations*, cliquer sur le bouton *Create automation* et choisir *Create new automation*.
 
 ### Bouton "Off"
 
@@ -73,6 +80,12 @@ Cette fois, le *trigger* est le quatrième bouton du variateur, et une fois pres
 
 {{< figure src="/images/posts/2025/10/26/ha-dimmer-switch/automation-off.png" alt="Automatisation permettant d'éteindre la lumière." position="center" caption="Automatisation permettant d'éteindre la lumière." captionPosition="center">}}
 
-La condition que j'ai ajoutée peut être à ignorée ici aussi.
+La condition que j'ai ajoutée peut être ignorée ici aussi.
 
 ### Régler l'intensité
+
+## Sources et informations complémentaires
+
+Smart Home Junkie, *How to cycle through scenes like Hue using a button in Home Assistant*, 23 octobre 2022  
+https://www.youtube.com/watch?v=nBdDdC2jVUc
+
