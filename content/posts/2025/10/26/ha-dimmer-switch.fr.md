@@ -26,11 +26,13 @@ Dans cet article, je vais détailler la procédure à suivre pour restaurer le f
 - Presser une fois sur le bouton "Off" pour éteindre les lumières;
 - Presser sur les boutons du milieu pour faire varier l'intensité de la lumière.
 
-## Prérequis
+## Prérequis et conseils
 
 Cet article part du principe qu'une instance de *Home Assistant* a été préalablement installée et correctement configurée; il ne détaille pas le déploiement de HA ni la configuration de l'intégration *Philips Hue*.
 
 Pour se simplifier la vie, il est possible de créer des groupes de lampes en passant par *Settings*, *Devices & services*, *Helpers*, *Create helper* et en sélectionnant le type *Group* puis *Light group*. Ce n'est pas obligatoire, mais cela permet d'éviter de devoir ajouter manuellement chaque ampoule à chaque scène.
+
+### Créer une scène
 
 Les scènes peuvent être créées depuis *Settings*, *Automations & scenes*, *Scenes*. En cliquant sur le bouton *Create scene*, une page permettant de la paramétrer s'ouvre:
 
@@ -44,22 +46,26 @@ La couleur et l'intensité de chaque ampoule peuvent être configurées en cliqu
 
 Ici, j'ai choisi une couleur plutôt chaude et une intensité réduite. Au total, j'ai créé trois scènes: lumières allumées, lumières tamisées et lumières éteintes.
 
-## Mise en place
-
-### Scripts
+### Créer un script
 
 Les scripts permettent de définir des séquences d'actions qui peuvent être exécutées par des automatisations ou depuis un raccourci (bouton virtuel, widget, etc.), et qui peuvent être réutilisées. Concrètement, dans mon cas, j'ai défini un script permettant d'éteindre la lumière qui est appelé en pressant sur l'interrupteur et lorsque je quitte mon domicile. Ainsi, la séquence d'action à exécuter n'a été définie qu'une seule fois. 
 
-Pour créer un script, aller sous *Settings*, *Automations & scenes* sous l'onglet *Scripts*. Ensuite, cliquer sur le bouton *Create script* puis choisir *Create new script* et *Add action*.
+Un script peut être créé depuis *Settings*, *Automations & scenes* sous l'onglet *Scripts*, puis en cliquant sur le bouton *Create script*.
 
-{{< figure src="/images/posts/2025/10/26/ha-dimmer-switch/script-action.png" alt="Choix de l'action à exécuter." position="center" caption="Choix de l'action à exécuter." captionPosition="center">}}
-
-*Scene 'Activate'*
+## Mise en place
 
 ### Bouton "On"
 
 
 ### Bouton "Off"
+
+Premièrement, créer un nouveau script et choisir l'action *Scene 'Activate'*.
+
+{{< figure src="/images/posts/2025/10/26/ha-dimmer-switch/script-action.png" alt="Choix de l'action à exécuter." position="center" caption="Choix de l'action à exécuter." captionPosition="center">}}
+
+Puis, choisir la scène représentant la pièce avec les lumières éteintes (*Choose entity*) et sauvegarder.
+
+{{< figure src="/images/posts/2025/10/26/ha-dimmer-switch/script-action-off.png" alt="Choix de l'action à exécuter." position="center" caption="Choix de l'action à exécuter." captionPosition="center">}}
 
 Depuis *Settings*, *Automations & scenes*, sous l'onglet *Automations*, cliquer sur le bouton *Create automation* et choisir *Create new automation*.
 
